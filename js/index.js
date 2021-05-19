@@ -12,7 +12,7 @@ $(document).ready(function() {
 
 var arrExperiencia = []
 var objEsperiencias = {}
-
+var arraux = []
 
 function formatearFecha(){
     
@@ -32,8 +32,6 @@ function guardarExperiencia(){
     
     $('#botonGuardarExperiencia').click(function(){
 
-    
-
         objEsperiencias.nombreEmpresa = $('#experienciaNombreEmpresa').val()
         objEsperiencias.nombrePuesto = $('#experienciaNombrePuesto').val()
         objEsperiencias.descripcionPuesto = $('#experienciaDescripcionPuesto').val()
@@ -41,18 +39,17 @@ function guardarExperiencia(){
 
       //  console.log(objEsperiencias)
 
-       arrExperiencia.push(objEsperiencias)
 
-       console.log(arrExperiencia)
+      let objExperienciaclone = {...objEsperiencias}
+
+       arrExperiencia.push(objExperienciaclone)
+       
+     //  console.log(arrExperiencia)
 
         $('#experienciaNombreEmpresa').val('') 
         $('#experienciaNombrePuesto').val('') 
-        $('#experienciaDescripcionPuesto').val('') 
+        $('#experienciaDescripcionPuesto').val('')
         $('#experienciaConocimientos').val('') 
-       
-
-        //SE DEBE GUARDAR POR CADA PUSH EN arrExperiencia
-        
         
     })
 }
