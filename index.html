@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Candidatos</title>
+
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/bootstrap-CSS/bootstrap.css">
+</head>
+
+<body>
+
+  <header>
+
+    <div class="container-fluid imgLogos">
+      <div class="contenedorLogos">
+        <img src="assets/img/EvolusLogo.png" class="evolusLogo" alt="">
+        <img src="assets/img/Intrajobbe.png" class="jobbeLogo" alt="">
+      </div>
+      <div class="float-right divIdiomasBotones">
+        <button type="button" class="btn botonIdioma" id="es">ES</button>
+        <button type="button" class="btn botonIdioma" id="eu">EU</button>
+        <button type="button" class="btn botonIdioma" id="cat">CAT</button>
+        <button type="button" class="btn botonIdioma" id="en">EN</button>
+      </div>
+    </div>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light barranavegacion">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Curriculum<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Curriculum</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Curriculum</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Curriculum</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+  </header>
+
+  <body class=" bg-light border-top">
+    <div class="container  mb-5 mt-5">
+      <form class="formularioCurriculum">
+
+        <div class="row  col-xs-6">
+          <div class="col-sm-4 col-xs-12 mt-2">
+            <label class="traducir">Nombre*</label>
+            <input type="text" class="form-control col-xs-12" id="inputNombre">
+          </div>
+          <div class="col-sm-4 col-xs-12 mt-2">
+            <label class="traducir">Primer apellido*</label>
+            <input type="text" class="form-control" id="inputApellido1">
+          </div>
+          <div class="col-sm-4 col-xs-12 mt-2">
+            <label class="traducir">Segundo apellido*</label>
+            <input type="text" class="form-control" id="inputApellido2">
+          </div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col-sm-4 col-xs-12 mt-2">
+            <label class="traducir">Telefono*</label>
+            <input type="text" class="form-control" id="inputTelefono">
+          </div>
+          <div class="col-sm-4 col-xs-12 mt-2">
+            <label class="traducir">Email*</label>
+            <input type="text" class="form-control" id="inputEmail">
+          </div>
+          <div class="col-sm-4 col-xs-12 mt-2">
+            <label class="traducir">DNI*</label>
+            <input type="text" class="form-control" id="inputDni">
+          </div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col-sm-4 col-xs-12 mt-2">
+            <label class="traducir">Direccion*</label>
+            <input type="text" class="form-control" id="inputDireccion">
+          </div>
+          <div class="col-sm-4 col-xs-12 mt-2">
+            <label class="traducir">C.P.*</label>
+            <input type="text" class="form-control" id="inputCodigoPostal">
+          </div>
+          <div class="col-sm-4 col-xs-12 mt-2">
+            <label class="traducir">Población*</label>
+            <input type="text" class="form-control" id="inputPoblacion">
+          </div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col-sm-4 col-xs-12 mt-2">
+            <label class="traducir">Fecha de nacimiento*</label>
+            <input type="date" class="form-control" id="fechaNacimiento">
+          </div>
+          <div class="col-sm-4 col-xs-12 mt-2">
+            <label class="traducir">Edad</label>
+            <input type="text" class="form-control col-xs-12" id="inputEdad">
+          </div>
+          <div class="col-sm-4 col-xs-12 mt-2">
+            <label class="traducir">Genero</label>
+            <select class="custom-select" id="genero">
+              <option value="Hombre">Hombre</option>
+              <option value="Mujer">Mujer</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col-sm-4 col-xs-12 mt-2">
+            <label class="traducir">Nacionalidad*</label>
+            <input type="text" class="form-control" id="inputNacionalidad" required>
+          </div>
+          <div class="col-sm-4 col-xs-12 mt-2">
+            <label class="traducir">Estado civil</label>
+            <select class="custom-select" id="estadoCivil">
+              <option value="Soltero/a">Soltero/a</option>
+              <option value="Casado/a">Casado/a</option>
+            </select>
+          </div>
+  
+        </div>
+
+
+
+        <div class="row col-sm-6 col-xs-12 mt-5">
+          <div class="col">
+            <label for="formFileSm" class="form-label">Adjuntar Curriculum</label>
+            <input class="form-control form-control-sm" id="inputFile" type="file" />
+          </div>
+
+        </div>
+
+        <button type="button" class="btn  mt-5 botonGenerico" data-toggle="modal" data-target="#exampleModal"
+          data-whatever="@mdo">Añadir experiencia</button>
+
+
+        <div class="modal fade modalExperiencia" id="exampleModal" tabindex="-1" role="dialog"
+          aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Experiencia</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-group">
+                    <label for="recipient-name" class="col-form-label traducir">Empresa</label>
+                    <input type="text" class="form-control" id="experienciaNombreEmpresa">
+                  </div>
+                  <div class="form-group">
+                    <label for="recipient-name" class="col-form-label traducir">Puesto</label>
+                    <input type="text" class="form-control" id="experienciaNombrePuesto">
+                  </div>
+                  <div class="form-group">
+                    <label for="message-text" class="col-form-label traducir">Descripción del puesto</label>
+                    <textarea class="form-control" id="experienciaDescripcionPuesto"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="recipient-name" class="col-form-label traducir">Conocimientos y tecnologías</label>
+                    <input type="text" class="form-control" id="experienciaConocimientos">
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn botonGenerico" id="botonGuardarExperiencia"
+                  data-dismiss="modal">Guardar experiencia</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <button type="button" class="btn btn-primary mt-3" id="botonEnvioFormulario">Enviar</button>
+      </form>
+
+
+    </div>
+
+  </body>
+
+  <script src="js/librerias/jquery-3.5.1.min.js"></script>
+  <script src="js/bootstrap-js/bootstrap.bundle.js"></script>
+
+
+  <script src="js/bootstrap-js/bootstrap.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
+
+
+</html>

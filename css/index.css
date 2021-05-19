@@ -1,0 +1,102 @@
+
+.principal{
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.imgLogos{
+    margin-top: 10px;
+}
+
+.contenedorLogos{
+    display: flex;
+   background-color: white;
+}
+
+.idiomas{
+    float: right;
+}
+
+.botonIdioma{
+    background-color: #FF3300;
+    color:white;
+}
+
+.formularioCurriculum{
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+#navbarNavAltMarkup{
+    display: flex !important;
+}
+#botonEnvioFormulario{
+    background-color: #FF3300;
+    border-color: #FF3300;
+}
+
+.botonGenerico{
+    background-color: #FF3300;
+    border-color: #FF3300;
+    color: white;
+}
+.boton:hover{
+    background-color: #FF3300;
+    border-color: #FF3300;
+    color: white;
+}
+
+.barraNavegacion{
+    background-color: white;
+}
+
+.divIdiomasBotones{
+    margin-top: -40px;
+}
+
+
+.inputRequired{
+    border-color: #FF3300;
+}
+
+.modal-header{
+    background-color: #FF3300;
+    color: white;
+}
+
+
+
+/*________________MEDIA QUERIES____________________*/
+
+
+/*TABLET*/
+
+@media screen and (max-width: 1024px){
+	
+}
+
+
+/*MÓVIL*/
+
+@media screen and (max-width:700px) { 
+	
+    .evolusLogo{
+        max-width: 120px;
+        max-height: 40px;
+    }
+
+   .jobbeLogo{
+        max-width: 120px;
+        margin-left: 39px;
+        max-height: 37px;
+    }
+
+    .barranavegacion{
+        margin-top: 5px;
+    }
+
+    .divIdiomasBotones{
+        margin-top: 10px;
+    }
+}
