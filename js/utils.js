@@ -2,20 +2,28 @@
 
  
 
-  //  let data = { codPostal }
+  
 
-    function llamadaAjax(type, url, data){
+    function llamadaAjax(type, url, data, funcionCallback){
+
+        //console.log('desde llamada')
+       // console.log(data)
+
         $.ajax({
             type: type,
             url: url,
             data: data,
-            success: function(data) {
-    
-               // data = JSON.parse(data.replaceAll('\r', '').replaceAll('\n', ''))
-    
-        
-            }
+            success: function(responseData) {
+            
+                //data = JSON.parse(responseData)
+                funcionCallback+'('+responseData+')'
+            },
+            error: function(xhr, ajaxOptions, thrownerror) {
+
+                console.error('Response error')
+             }
         });
+        
     }
 
 

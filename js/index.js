@@ -5,14 +5,65 @@ $(document).ready(function() {
     getDataFormulario()
     setEdad()
     guardarExperiencia()
+    traducciones()
+    getLogin()
+    $("#modalLogin").modal('show');
 
-   
+    
+
+    
 });
 
 
 var arrExperiencia = []
 var objEsperiencias = {}
-var arraux = []
+var lenguaje;
+
+
+
+function getLogin(){
+
+    $('#enviarLogin').click(function(){
+
+        let loginData = {
+            dniNif: $('#dniLogin').val(),
+            password: $('#passLogin').val(),
+        }
+
+        //console.log(loginData)
+        llamadaAjax('POST', 'server/login.php', loginData, setLogin )
+       
+       //console.log(data)
+      /*
+       $.ajax({
+        type: 'POST',
+        url: 'server/login.php',
+        data: loginData,
+        success: function(responseData) {
+        
+            //data = JSON.parse(responseData)
+            window.location = responseData
+
+
+           
+        },
+        error: function(xhr, ajaxOptions, thrownerror) {
+
+            console.error('Response error')
+         }
+         
+    });
+    */
+    })
+}
+
+
+function setLogin(responseData){
+    console.log('desde set')
+
+    console.log(responseData)
+
+}
 
 function formatearFecha(){
     
@@ -37,14 +88,9 @@ function guardarExperiencia(){
         objEsperiencias.descripcionPuesto = $('#experienciaDescripcionPuesto').val()
         objEsperiencias.ConocimientosPuesto = $('#experienciaConocimientos').val()
 
-      //  console.log(objEsperiencias)
-
-
       let objExperienciaclone = {...objEsperiencias}
 
        arrExperiencia.push(objExperienciaclone)
-       
-     //  console.log(arrExperiencia)
 
         $('#experienciaNombreEmpresa').val('') 
         $('#experienciaNombrePuesto').val('') 
@@ -117,7 +163,7 @@ function getDataFormulario(){
 
         console.log(objformulario)
 
-        //llamadaAjax(objformulario, post, tipoDatos, url)
+        llamadaAjax('POST', 'getData.php', objformulario )
 
       // }
     
@@ -132,9 +178,16 @@ function setEdad(){
 
     $('#fechaNacimiento').change(function(e){
 
+
+
        let edadAno = $('#fechaNacimiento').val().substring(0, 4)
+
+       let edadDia =  $('#fechaNacimiento').val().substring(4, 6)
+
        let anoActual = new Date().getFullYear();
        let anosUsuario = anoActual - edadAno
+
+       console.log(edadAno)
        $('#inputEdad').val(anosUsuario)
 
     })
@@ -142,6 +195,20 @@ function setEdad(){
 }
 
 
-function traduccciones(){
+function traducciones(){
 
+    
+    
+    $.getJSON('js/jsonTraducciones.json', function(json) {
+        
+        
+        $('.botonIdioma').click(function() {
+            console.log('XX')
+            //lenguaje = $(this).attr('id')
+           // $('.traducir').each(function(i, v) {
+           //     $(this).text(json[lenguaje][$(this).attr('key')])
+
+            //})
+        })
+    })
 }

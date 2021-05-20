@@ -1,4 +1,45 @@
 
+/*------ CARGA DE FUENTES ------*/
+
+@font-face {
+    font-family: 'neou-thin';
+    src: url('../assets/tipografia/neou/Neou-Thin.woff') format('woff'), url('../assets/tipografia/neou/Neou-Thin.woff2') format('woff2'), url('../assets/tipografia/neou/Neou-Thin.eot') format('eot'), url('../assets/tipografia/neou/Neou-Bold.ttf') format('ttf'), url('../assets/tipografia/neou/Neou-Thin.svg') format('svg');
+    /*font-weight: 300;*/
+}
+
+@font-face {
+    font-family: 'helvetica-lt-std-light';
+    src: url('../assets/tipografia/helvetica-lt-std-light/helvetica-lt-std-light.woff') format('woff'), url('../assets/tipografia/helvetica-lt-std-light/helvetica-lt-std-light.woff2') format('woff2'), url('../assets/tipografia/helvetica-lt-std-light/helvetica-lt-std-light.eot') format('eot'), url('../assets/tipografia/helvetica-lt-std-light/helvetica-lt-std-light.otf') format('otf'), url('../assets/tipografia/helvetica-lt-std-light/helvetica-lt-std-light.ttf') format('ttf'), url('../assets/tipografia/helvetica-lt-std-light/helvetica-lt-std-light.svg') format('svg');
+    /*font-weight: 300;*/
+}
+
+@font-face {
+    font-family: 'helvetica-lt-std-roman';
+    src: url('../assets/tipografia/helvetica-lt-std-roman/helvetica-lt-std-roman.woff') format('woff'), url('../assets/tipografia/helvetica-lt-std-roman/helvetica-lt-std-roman.woff2') format('woff2'), url('../assets/tipografia/helvetica-lt-std-roman/helvetica-lt-std-roman.eot') format('eot'), url('../assets/tipografia/helvetica-lt-std-roman/helvetica-lt-std-roman.otf') format('otf'), url('../assets/tipografia/helvetica-lt-std-roman/helvetica-lt-std-roman.ttf') format('ttf'), url('../assets/tipografia/helvetica-lt-std-roman/helvetica-lt-std-roman.svg') format('svg');
+    /*font-weight: 300;*/
+}
+
+h1{
+    font-family: 'neou-thin', sans-serif;
+}
+
+
+h2,h3,h4,h5,h6,span,label{
+    font-family: 'helvetica-lt-std-roman', sans-serif;
+}
+
+p{
+    font-family: 'helvetica-lt-std-light', sans-serif;
+}
+
+
+.bodyLogin{
+    background-color: #FF3300;
+}
+
+#labelGenerico{
+   color: #FF3300;
+}
 .principal{
     padding-top: 20px;
     padding-left: 20px;
@@ -20,6 +61,10 @@
 .botonIdioma{
     background-color: #FF3300;
     color:white;
+}
+
+.formularioLogin{
+    margin-top: 12% !important;
 }
 
 .formularioCurriculum{
